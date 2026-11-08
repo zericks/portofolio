@@ -1,0 +1,9 @@
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# PDF files
+portfolio_data.pdf

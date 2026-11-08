@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zerick Syahputra | IoT & Embedded Systems Developer</title>
+  <meta name="description" content="Portfolio Personal Zerick Syahputra - Mahasiswa S1 Informatika Universitas Amikom Yogyakarta dengan minat bakat di bidang Internet of Things (IoT), Mikrokontroler, ESP32, dan Arduino.">
+  <meta name="keywords" content="Zerick Syahputra, Portfolio, IoT, Embedded Systems, Mikrokontroler, Arduino, ESP32, Amikom Yogyakarta">
+  <meta name="author" content="Zerick Syahputra">
+
+  <!-- SVG Favicon with Blue Cosmic Glow -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23070d1e'/><circle cx='16' cy='16' r='10' stroke='%2300d2ff' stroke-width='2' fill='none'/><circle cx='16' cy='16' r='4' fill='%2300d2ff'/><path d='M8 16h3M21 16h3M16 8v3M16 21v3' stroke='%2370d6ff' stroke-width='2' stroke-linecap='round'/></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Background Space Canvas -->
+  <canvas id="space-canvas"></canvas>
+
+  <!-- Ambient Subtle Nebula Orbs -->
+  <div class="nebula-glow nebula-1"></div>
+  <div class="nebula-glow nebula-2"></div>
+  <div class="nebula-glow nebula-3"></div>
+
+  <!-- ==========================================================================
+       FLOATING NAVBAR IN TOP CENTER (CLEAN MINIMALIST GLOW ISLAND)
+       ========================================================================== -->
+  <header class="floating-nav-wrapper">
+    <nav class="floating-nav" id="main-nav" aria-label="Navigasi Utama">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="active"><i class="fas fa-home" style="margin-right: 4px; font-size: 12px;"></i> Beranda</a></li>
+        <li><a href="#about"><i class="fas fa-user" style="margin-right: 4px; font-size: 12px;"></i> Tentang</a></li>
+        <li><a href="#skills"><i class="fas fa-bolt" style="margin-right: 4px; font-size: 12px;"></i> Keahlian</a></li>
+        <li><a href="#projects"><i class="fas fa-laptop-code" style="margin-right: 4px; font-size: 12px;"></i> Proyek</a></li>
+        <li><a href="#achievements"><i class="fas fa-award" style="margin-right: 4px; font-size: 12px;"></i> Prestasi</a></li>
+        <li><a href="#contact"><i class="fas fa-paper-plane" style="margin-right: 4px; font-size: 12px;"></i> Kontak</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/6282324958741" target="_blank" rel="noopener" class="btn-nav-cta">
+          <i class="fab fa-whatsapp"></i> Hubungi
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Buka Menu Navigasi">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION (MAIN PAGE - CLEAN & MODERN)
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Column: Content -->
+          <div class="hero-content">
+            <div class="hero-pill-badge">
+              <span class="pulse-dot"></span>
+              <span>INTERNET OF THINGS & EMBEDDED SYSTEMS</span>
+            </div>
+
+            <p class="hero-greeting">Halo, Perkenalkan saya</p>
+            <h1 class="hero-name">
+              <span class="glow-text">ZERICK SYAHPUTRA</span>
+            </h1>
+
+            <!-- Typewriter Animation -->
+            <div class="typewriter-container" aria-live="polite">
+              <span class="typewriter-prefix">&gt;</span>
+              <span class="typewriter-text" id="typewriter-text"></span>
+              <span class="typewriter-cursor"></span>
+            </div>
+
+            <p class="hero-description">
+              Mahasiswa <strong>S1 Informatika Universitas Amikom Yogyakarta</strong> yang memiliki minat dan bakat mendalam di bidang <strong>Internet of Things (IoT)</strong>, rekayasa <strong>Embedded Systems</strong>, serta integrasi mikrokontroler <strong>ESP32 & Arduino</strong> dengan layanan cloud dan otomasi cerdas.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn-primary">
+                <i class="fas fa-microchip"></i> Jelajahi Proyek
+              </a>
+              <a href="#contact" class="btn-secondary">
+                <i class="fas fa-envelope"></i> Kontak Saya
+              </a>
+            </div>
+
+            <!-- Quick Social Media Bar -->
+            <div class="hero-socials-bar">
+              <a href="https://wa.me/6282324958741" target="_blank" rel="noopener" class="hero-social-btn" title="WhatsApp: 0823-2495-8741">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/zerick-syahputra-78b6b834b/" target="_blank" rel="noopener" class="hero-social-btn" title="LinkedIn Profile">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.instagram.com/_zerick.s?dlrf=MTIwOHEweWI4NWp2aA==" target="_blank" rel="noopener" class="hero-social-btn" title="Instagram @_zerick.s">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://github.com/zericks" target="_blank" rel="noopener" class="hero-social-btn" title="GitHub: github.com/zericks">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="mailto:zericksyahputra@students.amikom.ac.id" class="hero-social-btn" title="Email Mahasiswa">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Clean Modern Tech Portrait Card -->
+          <div class="hero-visual">
+            <div class="hero-modern-card">
+              <div class="card-inner-photo-wrap">
+                <img src="assets/images/zerick_profile.jpg" alt="Foto Zerick Syahputra di Lab IoT" class="card-portrait-img">
+              </div>
+              <div class="card-status-bar">
+                <div class="status-badge-item">
+                  <span class="status-indicator-dot"></span>
+                  <span>Aktif di Bidang IoT &amp; Hardware</span>
+                </div>
+                <span class="status-sep">&bull;</span>
+                <div class="status-location-item">
+                  <i class="fas fa-map-marker-alt"></i> Yogyakarta
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT ME SECTION
+         ========================================================================== -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">TENTANG SAYA</span>
+          <h2 class="section-title">Eksplorasi Dunia <span class="text-glow">Hardware & IoT</span></h2>
+          <p class="section-desc">Mengenal lebih dekat profil diri, riwayat pendidikan, rekam jejak pengalaman, dan minat bakat di bidang teknologi IoT.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Profile Card (Tanpa NIM) -->
+          <div class="about-card-profile">
+            <div class="profile-img-container">
+              <img src="assets/images/zerick_profile.jpg" alt="Foto Profil Zerick Syahputra" class="profile-img">
+            </div>
+
+            <h3 class="profile-card-name">Zerick Syahputra</h3>
+            <p class="profile-card-role">
+              Mahasiswa S1 Informatika<br>Universitas Amikom Yogyakarta
+            </p>
+
+            <div class="profile-contact-chips">
+              <a href="https://wa.me/6282324958741" target="_blank" rel="noopener" class="contact-chip-row">
+                <i class="fab fa-whatsapp"></i>
+                <span>0823-2495-8741</span>
+              </a>
+              <a href="mailto:zericksyahputra@students.amikom.ac.id" class="contact-chip-row">
+                <i class="fas fa-envelope"></i>
+                <span>zericksyahputra@students.amikom.ac.id</span>
+              </a>
+              <a href="https://www.linkedin.com/in/zerick-syahputra-78b6b834b/" target="_blank" rel="noopener" class="contact-chip-row">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn Profile</span>
+              </a>
+              <a href="https://www.instagram.com/_zerick.s?dlrf=MTIwOHEweWI4NWp2aA==" target="_blank" rel="noopener" class="contact-chip-row">
+                <i class="fab fa-instagram"></i>
+                <span>@_zerick.s</span>
+              </a>
+              <a href="https://github.com/zericks" target="_blank" rel="noopener" class="contact-chip-row">
+                <i class="fab fa-github"></i>
+                <span>github.com/zericks</span>
+              </a>
+              <div class="contact-chip-row">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Yogyakarta, Indonesia</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Narrative, Education & Experience -->
+          <div class="about-details">
+            <!-- Narrative Bio -->
+            <div class="about-narrative">
+              <h3><i class="fas fa-user-check" style="color: var(--primary-cyan);"></i> Profil & Minat Bakat</h3>
+              <p>
+                Saya adalah mahasiswa <strong>Program Studi S1 Informatika di Universitas Amikom Yogyakarta</strong> yang memiliki minat bakat tinggi dalam bidang <strong>Internet of Things (IoT)</strong> dan <strong>Mikrokontroler</strong>.
+              </p>
+              <p>
+                Ketertarikan saya berfokus pada perancangan sistem tertanam yang menjembatani dunia fisik dengan jaringan digital, mulai dari pembuatan skematik dan simulasi, pemrograman firmware berbasis <strong>Arduino</strong> dan <strong>ESP32 / ESP32-CAM</strong>, integrasi sensor serta modul RFID, hingga pengembangan antarmuka monitoring jarak jauh menggunakan <strong>Telegram Bot API</strong> dan platform <strong>Blynk IoT</strong>.
+              </p>
+              <p>
+                Saya terbiasa memecahkan masalah rekayasa hardware, berkolaborasi dalam tim, serta membagikan wawasan teknis kepada sesama rekan mahasiswa.
+              </p>
+            </div>
+
+            <!-- Riwayat Pendidikan Timelines -->
+            <div class="timeline-block">
+              <h3 class="timeline-heading">
+                <i class="fas fa-graduation-cap" style="color: var(--primary-cyan);"></i> Riwayat Pendidikan
+              </h3>
+              <div class="timeline-items">
+                <div class="timeline-card">
+                  <span class="timeline-date">2023 - SEKARANG</span>
+                  <h4 class="timeline-title">S1 Informatika</h4>
+                  <p class="timeline-place">Universitas Amikom Yogyakarta</p>
+                  <p class="timeline-desc">
+                    Mendalami Rekayasa Perangkat Lunak, Sistem Komunikasi Data, Jaringan Komputer, Algoritma Pemrograman, dan Sistem Tertanam (Embedded IoT Systems).
+                  </p>
+                </div>
+
+                <div class="timeline-card">
+                  <span class="timeline-date">SEKOLAH MENENGAH ATAS</span>
+                  <h4 class="timeline-title">SMAN 2 Ngaglik</h4>
+                  <p class="timeline-place">Jurusan MIPA (Matematika dan Ilmu Pengetahuan Alam)</p>
+                  <p class="timeline-desc">
+                    Memperoleh fondasi kuat dalam sains eksakta, analitis kuantitatif, dan logika berhitung yang menjadi pijakan dalam menekuni bidang komputasi dan elektronika.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pengalaman Timelines -->
+            <div class="timeline-block">
+              <h3 class="timeline-heading">
+                <i class="fas fa-briefcase" style="color: var(--primary-cyan);"></i> Pengalaman & Peran
+              </h3>
+              <div class="timeline-items">
+                <div class="timeline-card">
+                  <span class="timeline-date">TA. 2024/2025</span>
+                  <h4 class="timeline-title">Asisten Praktikum Mata Kuliah Komunikasi Data</h4>
+                  <p class="timeline-place">Fakultas Ilmu Komputer, Universitas Amikom Yogyakarta</p>
+                  <p class="timeline-desc">
+                    Membimbing mahasiswa dalam memahami modul transmisi sinyal data, pengujian konfigurasi jaringan, troubleshooting perangkat laboratorium, serta evaluasi hasil praktikum dengan predikat <strong>"BAIK"</strong> (No. SK: 012/FA/S1IF/AMIKOM/012/012).
+                  </p>
+                </div>
+
+                <div class="timeline-card">
+                  <span class="timeline-date">2024 - 2025</span>
+                  <h4 class="timeline-title">Juara 1 Divisi IoT & Member AMCC</h4>
+                  <p class="timeline-place">Amikom Computer Club (AMCC)</p>
+                  <p class="timeline-desc">
+                    Mengikuti pelatihan intensif Internet of Things 2024/2025, memimpin riset final project "Sistem Keamanan Pintu Depan ESP32", serta meraih <strong>Juara 1 pada Final Project Awarding 2025</strong>.
+                  </p>
+                </div>
+
+                <div class="timeline-card">
+                  <span class="timeline-date">2019</span>
+                  <h4 class="timeline-title">Juara III Lomba Kriya - PRAKARSA</h4>
+                  <p class="timeline-place">KAPSTRA FISIPOL Universitas Gadjah Mada (UGM)</p>
+                  <p class="timeline-desc">
+                    Meraih Juara III dalam ajang kompetisi rekayasa kriya dan kreativitas yang diselenggarakan oleh Keluarga Mahasiswa Pembangunan Sosial dan Kesejahteraan FISIPOL UGM.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Statistics Grid -->
+        <div class="stats-section-wrap">
+          <div class="stats-grid" id="stats-grid">
+            <div class="stat-card">
+              <i class="fas fa-trophy stat-icon" style="color: #ffb703;"></i>
+              <div class="counter-value" data-target="1" data-prefix="Juara ">Juara 1</div>
+              <div class="stat-name">AMCC Final Project IoT 2025</div>
+            </div>
+
+            <div class="stat-card">
+              <i class="fas fa-microchip stat-icon" style="color: var(--primary-cyan);"></i>
+              <div class="counter-value" data-target="5" data-suffix="+ Karya">5+ Karya</div>
+              <div class="stat-name">Hardware, IoT &amp; Ebook</div>
+            </div>
+
+            <div class="stat-card">
+              <i class="fas fa-award stat-icon" style="color: #a855f7;"></i>
+              <div class="counter-value" data-target="6" data-suffix=" Sertifikat">6 Sertifikat</div>
+              <div class="stat-name">Kompetisi IoT &amp; Asistensi</div>
+            </div>
+
+            <div class="stat-card">
+              <i class="fas fa-tools stat-icon" style="color: #06d6a0;"></i>
+              <div class="counter-value" data-target="5" data-suffix=" Core Tech">5 Core Tech</div>
+              <div class="stat-name">Arduino, ESP32, C++, C, Python</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SKILLS SECTION (KOTAK RATA KE TENGAH TANPA CARD - HANYA 5 SKILL UTAMA)
+         ========================================================================== -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">KEAHLIAN & TEKNOLOGI</span>
+          <h2 class="section-title">Core <span class="text-glow">Tech Stack</span></h2>
+          <p class="section-desc">Keahlian dan bahasa pemrograman utama yang saya kuasai dalam pengembangan perangkat mikrokontroler dan sistem IoT.</p>
+        </div>
+
+        <div class="skills-centered-container">
+          <!-- Box 1: Arduino -->
+          <div class="skill-square-box">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15.5 8c-1.6 0-3 .9-3.5 2.2-.5-1.3-1.9-2.2-3.5-2.2C6 8 4 10 4 12.5S6 17 8.5 17c1.6 0 3-.9 3.5-2.2.5 1.3 1.9 2.2 3.5 2.2 2.5 0 4.5-2 4.5-4.5S18 8 15.5 8z"/>
+                <path d="M7 12.5h3"/>
+                <path d="M14 12.5h3"/>
+                <path d="M15.5 11v3"/>
+              </svg>
+            </div>
+            <span class="skill-square-name">Arduino</span>
+          </div>
+
+          <!-- Box 2: ESP32 -->
+          <div class="skill-square-box">
+            <div class="skill-icon-wrap">
+              <i class="fas fa-microchip"></i>
+            </div>
+            <span class="skill-square-name">ESP32</span>
+          </div>
+
+          <!-- Box 3: C++ -->
+          <div class="skill-square-box">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 8.5a5 5 0 1 0 0 7"/>
+                <path d="M16 12h2.5"/>
+                <path d="M17.25 10.75v2.5"/>
+                <path d="M19.5 12h2.5"/>
+                <path d="M20.75 10.75v2.5"/>
+              </svg>
+            </div>
+            <span class="skill-square-name">C++</span>
+          </div>
+
+          <!-- Box 4: Bahasa C -->
+          <div class="skill-square-box">
+            <div class="skill-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 8.5a5.5 5.5 0 1 0 0 7"/>
+              </svg>
+            </div>
+            <span class="skill-square-name">Bahasa C</span>
+          </div>
+
+          <!-- Box 5: Python -->
+          <div class="skill-square-box">
+            <div class="skill-icon-wrap">
+              <i class="fab fa-python"></i>
+            </div>
+            <span class="skill-square-name">Python</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FEATURED PROJECTS SECTION (HORIZONTAL SLIDER / CAROUSEL)
+         ========================================================================== -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">PORTFOLIO PROYEK</span>
+          <h2 class="section-title">Karya Nyata & <span class="text-glow">Inovasi Hardware</span></h2>
+          <p class="section-desc">Kompilasi proyek sistem tertanam, otomasi IoT, konsol retro, dan computer vision. Geser untuk melihat seluruh karya.</p>
+        </div>
+
+        <div class="projects-carousel-wrapper">
+          <!-- Carousel Navigation Controls -->
+          <div class="carousel-nav-controls">
+            <span class="carousel-hint-text">
+              <i class="fas fa-arrows-alt-h"></i> Geser horizontal untuk menjelajahi proyek
+            </span>
+            <div class="carousel-arrow-buttons">
+              <button class="carousel-arrow-btn" id="carousel-prev" aria-label="Geser ke Kiri">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="carousel-arrow-btn" id="carousel-next" aria-label="Geser ke Kanan">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Carousel Slider Track (Side-by-side & Swipable) -->
+          <div class="projects-slider-track" id="projects-slider-track">
+            
+            <!-- Project 1: Smart Door Lock ESP32 -->
+            <article class="project-slide-card">
+              <div class="project-slide-media">
+                <img src="assets/images/smart_door_lock.png" alt="Sistem Keamanan Pintu Depan ESP32" class="project-slide-img" data-lightbox data-img="assets/images/smart_door_lock.png" data-title="Hardware Sistem Keamanan Pintu Depan" data-sub="Integrasi ESP32, RFID RC522, Keypad, dan ESP32-CAM">
+                <span class="slide-badge-tag" style="color: #ffb703; border-color: rgba(255, 183, 3, 0.5);">
+                  <i class="fas fa-trophy"></i> Juara 1 AMCC 2025
+                </span>
+              </div>
+              <div class="project-slide-body">
+                <h3 class="project-slide-title">Sistem Keamanan Pintu Depan ESP32</h3>
+                <p class="project-slide-desc">
+                  Proyek smart door lock dan smart bell yang mengintegrasikan RFID RC522, ESP32, dan ESP32-CAM. Mendukung autentikasi kartu RFID/PIN, kontrol jarak jauh via Blynk IoT, serta pengiriman foto tamu otomatis ke bot Telegram saat bel ditekan.
+                </p>
+                <div class="project-slide-tags">
+                  <span class="tech-tag-sm">ESP32</span>
+                  <span class="tech-tag-sm">ESP32-CAM</span>
+                  <span class="tech-tag-sm">RFID RC522</span>
+                  <span class="tech-tag-sm">Blynk IoT</span>
+                  <span class="tech-tag-sm">Telegram Bot</span>
+                </div>
+                <div class="project-slide-buttons">
+                  <a href="https://github.com/zericks/Sistem-Keamanan-Pintu-Depan" target="_blank" rel="noopener" class="btn-card-github">
+                    <i class="fab fa-github"></i> Repository
+                  </a>
+                  <button class="btn-card-primary" data-lightbox data-img="assets/images/award_amcc_group.jpg" data-title="Penghargaan Juara 1 AMCC Awarding 2025" data-sub="Zerick Syahputra dan Tim Juara 1 Divisi IoT">
+                    <i class="fas fa-award"></i> Foto Juara
+                  </button>
+                  <button class="btn-card-github" data-lightbox data-img="assets/images/smart_door_lock.png" data-title="Fisik Alat Smart Door Lock" data-sub="Tampilan panel alat fisik depan pintu">
+                    <i class="fas fa-search-plus"></i> Foto Alat
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2: Retro Space Impact Arduino Nano -->
+            <article class="project-slide-card">
+              <div class="project-slide-media">
+                <img src="assets/images/space_impact.png" alt="Konsol Space Impact Arduino Nano" class="project-slide-img" data-lightbox data-img="assets/images/space_impact.png" data-title="Konsol Game Space Impact Arduino Nano" data-sub="Proyek mini console piksel retro kendali pesawat luar angkasa">
+                <span class="slide-badge-tag">
+                  <i class="fas fa-rocket"></i> Retro Arcade
+                </span>
+              </div>
+              <div class="project-slide-body">
+                <h3 class="project-slide-title">Game Space Impact Arduino Nano</h3>
+                <p class="project-slide-desc">
+                  Mini project konsol retro portabel berbasis Arduino Nano yang merekayasa game klasik Space Impact. Dilengkapi joystick analog dua sumbu untuk manuver pesawat piksel dan 2 push-button untuk menembak serta jeda permainan pada layar LCD.
+                </p>
+                <div class="project-slide-tags">
+                  <span class="tech-tag-sm">Arduino Nano</span>
+                  <span class="tech-tag-sm">ATmega328P</span>
+                  <span class="tech-tag-sm">Analog Joystick</span>
+                  <span class="tech-tag-sm">LCD 16x2</span>
+                  <span class="tech-tag-sm">C / C++</span>
+                </div>
+                <div class="project-slide-buttons">
+                  <button class="btn-card-primary btn-open-game">
+                    <i class="fas fa-play"></i> Mainkan Simulasi LCD
+                  </button>
+                  <a href="https://github.com/zericks/Game-Space-Impact" target="_blank" rel="noopener" class="btn-card-github">
+                    <i class="fab fa-github"></i> Repository
+                  </a>
+                  <button class="btn-card-github" data-lightbox data-img="assets/images/space_impact.png" data-title="Konsol Fisik Space Impact" data-sub="Desain casing box kustom dengan joystick dan push-button">
+                    <i class="fas fa-search-plus"></i> Foto Fisik
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3: Smart Bell Telegram -->
+            <article class="project-slide-card">
+              <div class="project-slide-media">
+                <img src="assets/images/telegram_bot.jpg" alt="Smart Bell Telegram ESP32-CAM" class="project-slide-img" data-lightbox data-img="assets/images/telegram_bot.jpg" data-title="Tangkapan Layar Bot Telegram Smart Bell" data-sub="Pengiriman foto otomatis saat tombol bel ditekan">
+                <span class="slide-badge-tag">
+                  <i class="fab fa-telegram-plane"></i> IoT Security
+                </span>
+              </div>
+              <div class="project-slide-body">
+                <h3 class="project-slide-title">Smart Bell Telegram ESP32-CAM</h3>
+                <p class="project-slide-desc">
+                  Sistem bel pintu cerdas berbasis ESP32-CAM dan protokol Wi-Fi. Saat tamu menekan bel, modul kamera secara instan menangkap foto pengunjung dalam resolusi optimal dan mengirimkan alert notifikasi foto ke bot Telegram pemilik rumah secara real-time.
+                </p>
+                <div class="project-slide-tags">
+                  <span class="tech-tag-sm">ESP32-CAM</span>
+                  <span class="tech-tag-sm">Telegram Bot API</span>
+                  <span class="tech-tag-sm">Wi-Fi Network</span>
+                  <span class="tech-tag-sm">OV2640 Sensor</span>
+                </div>
+                <div class="project-slide-buttons">
+                  <a href="https://github.com/zericks/SmartBell-Telegram" target="_blank" rel="noopener" class="btn-card-github">
+                    <i class="fab fa-github"></i> Repository
+                  </a>
+                  <button class="btn-card-primary" data-lightbox data-img="assets/images/telegram_bot.jpg" data-title="Notifikasi Bot Telegram" data-sub="Bukti pengiriman gambar tamu real-time ke aplikasi Telegram">
+                    <i class="fas fa-eye"></i> Lihat Alert Telegram
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 4: Alphabet Sign Language Detection -->
+            <article class="project-slide-card">
+              <div class="project-slide-media" style="display: flex; align-items: center; justify-content: center; background: radial-gradient(circle, #0f172a, #050814);">
+                <i class="fas fa-hands-helping" style="font-size: 5rem; color: var(--primary-cyan); filter: drop-shadow(0 0 15px rgba(0, 210, 255, 0.5));"></i>
+                <span class="slide-badge-tag">
+                  <i class="fas fa-brain"></i> Computer Vision
+                </span>
+              </div>
+              <div class="project-slide-body">
+                <h3 class="project-slide-title">Deteksi Penerjemah Bahasa Isyarat</h3>
+                <p class="project-slide-desc">
+                  Sistem pengenalan dan klasifikasi alfabet bahasa isyarat real-time bertenaga Computer Vision dan Machine Learning. Mengidentifikasi gesture posisi tangan pengguna melalui kamera web untuk diterjemahkan menjadi huruf alfabet teks guna mempermudah aksesibilitas komunikasi.
+                </p>
+                <div class="project-slide-tags">
+                  <span class="tech-tag-sm">Python</span>
+                  <span class="tech-tag-sm">OpenCV</span>
+                  <span class="tech-tag-sm">Gesture Recognition</span>
+                  <span class="tech-tag-sm">Image Processing</span>
+                </div>
+                <div class="project-slide-buttons">
+                  <a href="https://github.com/zericks/alphabet-sign-language-detection" target="_blank" rel="noopener" class="btn-card-github">
+                    <i class="fab fa-github"></i> Repository
+                  </a>
+                  <a href="https://github.com/zericks/alphabet-sign-language-detection" target="_blank" rel="noopener" class="btn-card-primary">
+                    <i class="fas fa-code"></i> Source Code
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 5: RakitProject - Ebook & Tutorial IoT -->
+            <article class="project-slide-card">
+              <div class="project-slide-media" style="display: flex; align-items: center; justify-content: center; background: radial-gradient(circle, #101c38, #050a1a);">
+                <i class="fas fa-book-reader" style="font-size: 5rem; color: #00d2ff; filter: drop-shadow(0 0 20px rgba(0, 210, 255, 0.6));"></i>
+                <span class="slide-badge-tag" style="color: #00d2ff; border-color: rgba(0, 210, 255, 0.4);">
+                  <i class="fas fa-shopping-bag"></i> Lynk.id Store
+                </span>
+              </div>
+              <div class="project-slide-body">
+                <h3 class="project-slide-title">RakitProject: Ebook &amp; Tutorial IoT</h3>
+                <p class="project-slide-desc">
+                  Kompilasi panduan terstruktur dan ebook tutorial praktis perakitan mikrokontroler &amp; Internet of Things. Mengulas langkah demi langkah pemrograman firmware Arduino &amp; ESP32, pengkabelan sensor, hingga integrasi cloud dan IoT dashboard yang dipublikasikan melalui platform Lynk.id.
+                </p>
+                <div class="project-slide-tags">
+                  <span class="tech-tag-sm">Ebook Tutorial</span>
+                  <span class="tech-tag-sm">Lynk.id</span>
+                  <span class="tech-tag-sm">IoT Education</span>
+                  <span class="tech-tag-sm">Mikrokontroler</span>
+                  <span class="tech-tag-sm">Panduan Praktis</span>
+                </div>
+                <div class="project-slide-buttons">
+                  <a href="https://lynk.id/rakitproject" target="_blank" rel="noopener" class="btn-card-primary">
+                    <i class="fas fa-external-link-alt"></i> Kunjungi Lynk.id
+                  </a>
+                  <a href="https://lynk.id/rakitproject" target="_blank" rel="noopener" class="btn-card-github">
+                    <i class="fas fa-book-open"></i> Katalog Ebook
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ACHIEVEMENTS & CERTIFICATES SECTION
+         ========================================================================== -->
+    <section class="achievements-section" id="achievements">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">PENGHARGAAN & LISENSI</span>
+          <h2 class="section-title">Sertifikat & <span class="text-glow">Prestasi Resmi</span></h2>
+          <p class="section-desc">Dokumentasi sertifikasi kejuaraan IoT, asistensi praktikum, dan penghargaan kompetisi resmi yang telah diraih.</p>
+        </div>
+
+        <div class="achievements-grid">
+          <!-- Cert 1: Juara 1 AMCC IoT -->
+          <div class="cert-card" data-lightbox data-img="assets/images/cert_amcc_iot.jpg" data-title="Sertifikat Juara 1 Divisi Internet of Things" data-sub="Awarding Pelatihan Member AMCC 2024/2025 - Universitas Amikom Yogyakarta">
+            <div class="cert-thumbnail-wrap">
+              <img src="assets/images/cert_amcc_iot.jpg" alt="Sertifikat Juara 1 IoT AMCC" class="cert-thumbnail">
+              <div class="cert-overlay-hover">
+                <span><i class="fas fa-search-plus"></i> Perbesar Sertifikat</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <span class="cert-badge-rank"><i class="fas fa-trophy"></i> JUARA 1</span>
+              <h3 class="cert-title">Juara 1 Divisi Internet of Things</h3>
+              <p class="cert-issuer">AMCC - Universitas Amikom Yogyakarta</p>
+              <span class="cert-date"><i class="far fa-calendar-alt"></i> 12 Juli 2025 | No: 2787/S-KMHS/AMIKOM/VIII/2025</span>
+            </div>
+          </div>
+
+          <!-- Cert 2: Asisten Praktikum Komdat -->
+          <div class="cert-card" data-lightbox data-img="assets/images/cert_komdat.jpg" data-title="Sertifikat Asisten Praktikum Komunikasi Data" data-sub="Program Studi S1 Informatika TA. 2024/2025 dengan Predikat BAIK">
+            <div class="cert-thumbnail-wrap">
+              <img src="assets/images/cert_komdat.jpg" alt="Sertifikat Asisten Praktikum Komdat" class="cert-thumbnail">
+              <div class="cert-overlay-hover">
+                <span><i class="fas fa-search-plus"></i> Perbesar Sertifikat</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <span class="cert-badge-rank" style="color: #38bdf8;"><i class="fas fa-check-circle"></i> PREDIKAT BAIK</span>
+              <h3 class="cert-title">Asisten Praktikum Komunikasi Data</h3>
+              <p class="cert-issuer">Fakultas Ilmu Komputer, Universitas Amikom</p>
+              <span class="cert-date"><i class="far fa-calendar-alt"></i> 12 Agustus 2025 | No: 012/FA/S1IF/AMIKOM/012/012</span>
+            </div>
+          </div>
+
+          <!-- Cert 3: Juara III UGM Kriya -->
+          <div class="cert-card" data-lightbox data-img="assets/images/cert_ugm.jpg" data-title="Sertifikat Juara III Lomba Kriya PRAKARSA 2019" data-sub="KAPSTRA FISIPOL Universitas Gadjah Mada (UGM)">
+            <div class="cert-thumbnail-wrap">
+              <img src="assets/images/cert_ugm.jpg" alt="Sertifikat Juara III Kriya UGM" class="cert-thumbnail">
+              <div class="cert-overlay-hover">
+                <span><i class="fas fa-search-plus"></i> Perbesar Sertifikat</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <span class="cert-badge-rank" style="color: #ff9f1c;"><i class="fas fa-medal"></i> JUARA III</span>
+              <h3 class="cert-title">Juara III Lomba Kriya PRAKARSA</h3>
+              <p class="cert-issuer">KAPSTRA FISIPOL Universitas Gadjah Mada</p>
+              <span class="cert-date"><i class="far fa-calendar-alt"></i> 2 November 2019</span>
+            </div>
+          </div>
+
+          <!-- Cert 4: Technocorner UGM IoT Development -->
+          <div class="cert-card" data-lightbox data-img="assets/images/cert_ugm_technocorner.jpg" data-title="Sertifikat IoT Development - Technocorner 2026" data-sub="KMTETI Departemen Teknik Elektro dan Teknologi Informasi, Fakultas Teknik UGM">
+            <div class="cert-thumbnail-wrap">
+              <img src="assets/images/cert_ugm_technocorner.jpg" alt="Sertifikat Technocorner UGM 2026" class="cert-thumbnail">
+              <div class="cert-overlay-hover">
+                <span><i class="fas fa-search-plus"></i> Perbesar Sertifikat</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <span class="cert-badge-rank" style="color: #a855f7;"><i class="fas fa-microchip"></i> IOT DEVELOPMENT</span>
+              <h3 class="cert-title">Technocorner 2026 - UGM</h3>
+              <p class="cert-issuer">DTETI FT Universitas Gadjah Mada</p>
+              <span class="cert-date"><i class="far fa-calendar-alt"></i> 27 Juni 2026 | Peserta Cabang Lomba</span>
+            </div>
+          </div>
+
+          <!-- Cert 5: Telkom University IoT Tech Competition -->
+          <div class="cert-card" data-lightbox data-img="assets/images/cert_telkom_iot.jpg" data-title="Sertifikat IoT Tech Competition - Blue Techno Festival" data-sub="School of Electrical Engineering (FTE) Telkom University">
+            <div class="cert-thumbnail-wrap">
+              <img src="assets/images/cert_telkom_iot.jpg" alt="Sertifikat Blue Techno Festival Telkom University" class="cert-thumbnail">
+              <div class="cert-overlay-hover">
+                <span><i class="fas fa-search-plus"></i> Perbesar Sertifikat</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <span class="cert-badge-rank" style="color: #00d2ff;"><i class="fas fa-wifi"></i> IOT TECH COMPETITION</span>
+              <h3 class="cert-title">Blue Techno Festival 2025</h3>
+              <p class="cert-issuer">Fakultas Teknik Elektro, Telkom University</p>
+              <span class="cert-date"><i class="far fa-calendar-alt"></i> 10 Desember 2025 | No: 697/KMTE/BiroEvent/BTF/XII/2025</span>
+            </div>
+          </div>
+
+          <!-- Cert 6: PNJ iTechno Cup IoT Competition -->
+          <div class="cert-card" data-lightbox data-img="assets/images/cert_pnj_itechno.jpg" data-title="Sertifikat IoT Competition - iTechno Cup 2026" data-sub="HIMATIK Jurusan Teknik Informatika dan Komputer Politeknik Negeri Jakarta (PNJ)">
+            <div class="cert-thumbnail-wrap">
+              <img src="assets/images/cert_pnj_itechno.jpg" alt="Sertifikat iTechno Cup PNJ 2026" class="cert-thumbnail">
+              <div class="cert-overlay-hover">
+                <span><i class="fas fa-search-plus"></i> Perbesar Sertifikat</span>
+              </div>
+            </div>
+            <div class="cert-body">
+              <span class="cert-badge-rank" style="color: #f72585;"><i class="fas fa-network-wired"></i> IOT COMPETITION</span>
+              <h3 class="cert-title">iTechno Cup 2026 - PNJ</h3>
+              <p class="cert-issuer">HIMATIK Politeknik Negeri Jakarta</p>
+              <span class="cert-date"><i class="far fa-calendar-alt"></i> 29 September 2026 | No: 826/PL3.13/SRt/iTECHNO CUP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT SECTION
+         ========================================================================== -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">HUBUNGI SAYA</span>
+          <h2 class="section-title">Kirim Sinyal & <span class="text-glow">Kolaborasi</span></h2>
+          <p class="section-desc">Terbuka untuk kolaborasi proyek IoT, peluang asistensi laboratorium, riset mikrokontroler, atau diskusi seputar hardware.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Direct Contact Information -->
+          <div class="contact-info-panel">
+            <!-- WhatsApp -->
+            <div class="contact-card-box" data-copy="082324958741">
+              <div class="contact-card-icon">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <div class="contact-card-details">
+                <span class="contact-label">WhatsApp / Telepon</span>
+                <span class="contact-value">0823-2495-8741</span>
+                <span class="contact-action-hint">Klik untuk menyalin nomor / <a href="https://wa.me/6282324958741" target="_blank" rel="noopener" style="color: var(--primary-cyan); text-decoration: underline;">Buka WhatsApp</a></span>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-card-box" data-copy="zericksyahputra@students.amikom.ac.id">
+              <div class="contact-card-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-card-details">
+                <span class="contact-label">Email Mahasiswa</span>
+                <span class="contact-value">zericksyahputra@students.amikom.ac.id</span>
+                <span class="contact-action-hint">Klik untuk salin / <a href="mailto:zericksyahputra@students.amikom.ac.id" style="color: var(--primary-cyan); text-decoration: underline;">Kirim Pesan</a></span>
+              </div>
+            </div>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/zerick-syahputra-78b6b834b/" target="_blank" rel="noopener" class="contact-card-box">
+              <div class="contact-card-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <div class="contact-card-details">
+                <span class="contact-label">LinkedIn Profile</span>
+                <span class="contact-value">linkedin.com/in/zerick-syahputra</span>
+                <span class="contact-action-hint">Terhubung secara profesional di LinkedIn &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/_zerick.s?dlrf=MTIwOHEweWI4NWp2aA==" target="_blank" rel="noopener" class="contact-card-box">
+              <div class="contact-card-icon">
+                <i class="fab fa-instagram"></i>
+              </div>
+              <div class="contact-card-details">
+                <span class="contact-label">Instagram Personal</span>
+                <span class="contact-value">@_zerick.s</span>
+                <span class="contact-action-hint">Kunjungi akun Instagram &rarr;</span>
+              </div>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/zericks" target="_blank" rel="noopener" class="contact-card-box">
+              <div class="contact-card-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-card-details">
+                <span class="contact-label">Repositori GitHub</span>
+                <span class="contact-value">github.com/zericks</span>
+                <span class="contact-action-hint">Lihat repositori source code proyek &rarr;</span>
+              </div>
+            </a>
+
+            <!-- Lynk.id Store / Ebook Tutorial -->
+            <a href="https://lynk.id/rakitproject" target="_blank" rel="noopener" class="contact-card-box" style="border-color: rgba(0, 210, 255, 0.4);">
+              <div class="contact-card-icon" style="background: rgba(0, 210, 255, 0.15); color: var(--primary-cyan); box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);">
+                <i class="fas fa-book-open"></i>
+              </div>
+              <div class="contact-card-details">
+                <span class="contact-label">Ebook &amp; Tutorial IoT (RakitProject)</span>
+                <span class="contact-value">lynk.id/rakitproject</span>
+                <span class="contact-action-hint" style="color: var(--primary-cyan);">Buka katalog ebook &amp; panduan tutorial di Lynk.id &rarr;</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Right: Interactive Message Form -->
+          <div class="contact-form-panel">
+            <h3><i class="fas fa-paper-plane" style="color: var(--primary-cyan); margin-right: 8px;"></i> Kirim Pesan Langsung</h3>
+            <p>Tinggalkan pesan, peluang proyek IoT, atau tawaran kolaborasi langsung ke inbox saya.</p>
+
+            <div id="form-success-alert" style="display: none; padding: 1rem; background: rgba(6, 214, 160, 0.15); border: 1px solid #06d6a0; border-radius: 8px; color: #a7f3d0; margin-bottom: 1.2rem; font-size: 0.9rem;">
+              <i class="fas fa-check-circle"></i> Sinyal terkirim! Terima kasih atas pesan Anda. Saya akan segera menghubungi Anda kembali.
+            </div>
+
+            <form id="portfolio-contact-form">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Nama Lengkap</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="Contoh: Budi Santoso" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Alamat Email / WhatsApp</label>
+                <input type="text" id="contact-email" class="form-control" placeholder="nama@instansi.com atau 0812xxxx" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Subjek / Topik</label>
+                <input type="text" id="contact-subject" class="form-control" placeholder="Contoh: Kolaborasi Proyek IoT / Asistensi" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-message">Isi Pesan</label>
+                <textarea id="contact-message" class="form-control" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+                <i class="fas fa-paper-plane"></i> Kirim Pesan
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand-wrap">
+          <span class="footer-brand">ZERICK SYAHPUTRA</span>
+          <span class="footer-tagline">Explorer of Internet of Things & Embedded Systems</span>
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://wa.me/6282324958741" target="_blank" rel="noopener" class="social-icon-btn" title="WhatsApp: 0823-2495-8741">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/zerick-syahputra-78b6b834b/" target="_blank" rel="noopener" class="social-icon-btn" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/_zerick.s?dlrf=MTIwOHEweWI4NWp2aA==" target="_blank" rel="noopener" class="social-icon-btn" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://github.com/zericks" target="_blank" rel="noopener" class="social-icon-btn" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:zericksyahputra@students.amikom.ac.id" class="social-icon-btn" title="Email Mahasiswa">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Zerick Syahputra. Dark Space Edition & Blue Neon Glow.
+        </div>
+        <div class="footer-coords">
+          <i class="fas fa-crosshairs"></i> Yogyakarta (7.7709° S, 110.4085° E) | <span id="cosmic-clock">--:--:-- WIB</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL 1: LIGHTBOX MODAL (CERTIFICATES & HD PHOTOS)
+       ========================================================================== -->
+  <div class="modal-overlay" id="lightbox-modal" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="lightbox-close-btn" aria-label="Tutup Tampilan">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="lightbox-content">
+        <img src="" alt="Pratinjau Gambar" id="lightbox-img" class="lightbox-img-full">
+        <h3 class="lightbox-caption-title" id="lightbox-title"></h3>
+        <p class="lightbox-caption-sub" id="lightbox-sub"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: RETRO SPACE IMPACT GAME (ARDUINO NANO SIMULATION)
+       ========================================================================== -->
+  <div class="modal-overlay" id="game-modal" role="dialog" aria-modal="true">
+    <div class="modal-container" style="max-width: 600px;">
+      <button class="modal-close-btn" id="game-modal-close" aria-label="Tutup Game">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="game-arcade-panel">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+          <h3 style="font-family: var(--font-heading); color: #fff; margin: 0;">
+            <i class="fas fa-gamepad" style="color: var(--primary-cyan);"></i> Space Impact Arcade
+          </h3>
+          <button id="game-sound-toggle" style="background: rgba(0,210,255,0.15); border: 1px solid var(--primary-cyan); color: var(--primary-cyan); border-radius: 20px; padding: 3px 10px; font-size: 11px; cursor: pointer;">
+            <i class="fas fa-volume-up"></i> SFX
+          </button>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-secondary);">
+          Simulasi layar LCD hijau Game Space Impact berbasis Arduino Nano karya Zerick Syahputra.
+        </p>
+
+        <!-- Arcade LCD Bezel Case -->
+        <div class="arcade-lcd-case">
+          <div class="lcd-screen-bezel">
+            <canvas id="space-impact-canvas"></canvas>
+          </div>
+
+          <!-- Controls Layout -->
+          <div class="arcade-controls-row">
+            <!-- Virtual D-Pad for Mobile & Mouse -->
+            <div class="dpad-container">
+              <div></div>
+              <button class="dpad-btn" id="game-up"><i class="fas fa-chevron-up"></i></button>
+              <div></div>
+              <button class="dpad-btn" id="game-left"><i class="fas fa-chevron-left"></i></button>
+              <button class="dpad-btn" id="game-start-btn" style="font-size: 10px; font-weight: bold; background: #047857; color: #fff;">GO</button>
+              <button class="dpad-btn" id="game-right"><i class="fas fa-chevron-right"></i></button>
+              <div></div>
+              <button class="dpad-btn" id="game-down"><i class="fas fa-chevron-down"></i></button>
+              <div></div>
+            </div>
+
+            <!-- Virtual Action Buttons -->
+            <div class="arcade-action-btns">
+              <button class="arcade-btn-round pause" id="game-pause" title="Pause Game">PAUSE</button>
+              <button class="arcade-btn-round fire" id="game-fire" title="Fire Laser">FIRE</button>
+            </div>
+          </div>
+
+          <div style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">
+            Kontrol Keyboard: [Panah / W,A,S,D] Gerak | [Spasi] Tembak | [P] Jeda
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/space-canvas.js"></script>
+  <script src="js/space-impact-game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
