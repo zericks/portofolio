@@ -1737,3 +1737,164 @@ footer {
 .arcade-btn-round:active {
   transform: scale(0.92);
 }
+
+/* ==========================================================================
+   CASE STUDY MODAL (STANDAR AKADEMIK KUALITAS KONTEN 35%)
+   ========================================================================== */
+.case-study-panel {
+  padding: 2.2rem 2.5rem;
+  color: var(--text-primary);
+}
+
+.case-study-header {
+  border-bottom: 1px solid var(--border-glass);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.case-study-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.case-study-pill {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pill-iot {
+  background: rgba(0, 210, 255, 0.12);
+  color: var(--primary-cyan);
+  border: 1px solid rgba(0, 210, 255, 0.3);
+}
+
+.pill-award {
+  background: rgba(255, 183, 3, 0.12);
+  color: #ffb703;
+  border: 1px solid rgba(255, 183, 3, 0.3);
+}
+
+.pill-digipreneur {
+  background: rgba(114, 9, 183, 0.25);
+  color: #e0aaff;
+  border: 1px solid rgba(114, 9, 183, 0.5);
+}
+
+.case-study-title {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 0.6rem;
+}
+
+.case-study-lead {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.case-study-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.case-study-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+}
+
+.case-study-box.problem {
+  border-left: 3px solid #ef4444;
+}
+
+.case-study-box.solution {
+  border-left: 3px solid #06d6a0;
+}
+
+.case-study-box h4 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.case-study-box ul {
+  padding-left: 1.2rem;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.case-study-box ul li {
+  margin-bottom: 0.5rem;
+}
+
+.case-study-section {
+  margin-bottom: 1.8rem;
+}
+
+.case-study-section h4 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.metrics-flex-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.metric-highlight-card {
+  background: rgba(0, 210, 255, 0.05);
+  border: 1px solid rgba(0, 210, 255, 0.2);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1rem;
+  text-align: center;
+}
+
+.metric-val {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-cyan);
+  display: block;
+}
+
+.metric-lbl {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-top: 0.35rem;
+  display: block;
+}
+
+.case-study-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border-glass);
+}
+

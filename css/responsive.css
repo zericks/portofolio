@@ -110,6 +110,20 @@
   .contact-grid {
     grid-template-columns: 1fr;
   }
+
+  .case-study-panel {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .case-study-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .metrics-flex-row {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
 }
 
 @media (max-width: 640px) {
